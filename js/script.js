@@ -6,23 +6,23 @@
 
 "use strict"
 
-// Function to recommend a movie based on age group
-function myButtonClicked() {
-  // Input
-  const age = parseInt(document.getElementById("age").value)
-
-  // Process
-  let movie = ""
-  if ((age = Toddler)) {
-  movie = "Barney"
-  } else if ((age = PreTeen)) {
-  movie = "Harry Potter"
-} else if ((age = Teen)) {
-  movie = "Twilight"
-} else if ((age = Adult)) {
-  movie = "The Godfather"
+  // Function to recommend a movie based on age group
+  function myButtonClicked() {
+  // input
+  const age = parseInt(document.getElementById("age").value);
+  
+  // process
+  if (age >= 17){
+    // output
+    document.getElementById("answer").innerHTML = "You can see an R movie alone."
+  } else if (age >= 13) {
+    // output
+    document.getElementById("answer").innerHTML = "You can see a PG-13 movie alone."
+  } else if (age >= 5) {
+    //output
+    document.getElementById("answer").innerHTML = "You can see a G or PG movie alone."
+  } else {
+    // output
+    document.getElementById("answer").innerHTML = "You are too young for most things."
+  }
 }
-
-// Output
-document.getElementById("answer").innerHTML =
-  "You should watch " + movie + " Movie" }
